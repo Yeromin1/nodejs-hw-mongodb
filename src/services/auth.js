@@ -1,6 +1,12 @@
 import createHttpError from 'http-errors';
-import { UsersCollection } from '../db/models/user.js';
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import path from 'node:path';
+import fs from 'node:fs/promises';
+import handlebars from 'handlebars';
+import { randomBytes } from 'crypto';
+
+import { UsersCollection } from '../db/models/user.js';
 import { SessionsCollection } from '../db/models/session.js';
 import {
   FIFTEEN_MINUTES,
@@ -8,12 +14,7 @@ import {
   TEMPLATES_DIR,
   THIRTY_DAYS,
 } from '../constants/index.js';
-import { randomBytes } from 'crypto';
-import jwt from 'jsonwebtoken';
 import { getEnvVar } from '../utils/getEnvVar.js';
-import path from 'node:path';
-import fs from 'node:fs/promises';
-import handlebars from 'handlebars';
 import { sendResetEmail } from '../utils/sendResetEmail.js';
 
 const createSession = () => {

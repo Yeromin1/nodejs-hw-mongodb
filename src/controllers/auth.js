@@ -5,8 +5,8 @@ import {
   refreshUserSession,
   registerUser,
   resetPassword,
+  sendResetEmailService,
 } from '../services/auth.js';
-import { sendResetEmailService } from '../services/auth.js';
 
 export const registerUserController = async (req, res) => {
   const user = await registerUser(req.body);
