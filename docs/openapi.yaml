@@ -25,36 +25,34 @@ paths:
   /contacts/{id}:
     get:
       $ref: ../swagger/paths/contacts/{id}/get.yaml
-
     patch:
       $ref: ../swagger/paths/contacts/{id}/patch.yaml
-
     delete:
       $ref: ../swagger/paths/contacts/{id}/delete.yaml
-
   /auth/register:
     post:
-      $ref: ../swagger/paths/auth/register/post.yaml
-
+      $ref: ../swagger/paths/auth/register.yaml
   /auth/login:
     post:
-      $ref: ../swagger/paths/auth/login/post.yaml
-
-  /auth/refresh:
-    post:
-      $ref: ../swagger/paths/auth/refresh/post.yaml
-
+      $ref: ../swagger/paths/auth/login.yaml
   /auth/logout:
     post:
-      $ref: ../swagger/paths/auth/logout/post.yaml
-
+      $ref: ../swagger/paths/auth/logout.yaml
+  /auth/refresh:
+    post:
+      $ref: ../swagger/paths/auth/refreshUserSession.yaml
   /auth/send-reset-email:
     post:
-      $ref: ../swagger/paths/auth/send-reset-email/post.yaml
-
+      $ref: ../swagger/paths/auth/sendResetEmail.yaml
   /auth/reset-pwd:
     post:
-      $ref: ../swagger/paths/auth/reset-pwd/post.yaml
+      $ref: ../swagger/paths/auth/resetPwd.yaml
+  /auth/get-oauth-url:
+    get:
+      $ref: ../swagger/paths/auth/get-oauth-url.yaml
+  /auth/confirm-oauth:
+    post:
+      $ref: ../swagger/paths/auth/confirm-oauth.yaml
 
 components:
   securitySchemes:
