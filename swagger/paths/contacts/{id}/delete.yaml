@@ -1,8 +1,8 @@
 tags:
   - Contacts
-summary: Delete contact by id
+summary: Delete Contact
 operationId: deleteContact
-description: 'Delete contact by id'
+description: 'Delete contact by contactId'
 security:
   - bearerAuth: []
 parameters:
@@ -11,31 +11,12 @@ parameters:
     required: true
     schema:
       type: string
-      example: '65ca67e7ae7f10c88b598384'
-
+      example: '67cece57cf044b5afacf7749'
 responses:
   '204':
-    description: 'Delete contact by id'
-    content:
-      application/json:
-        schema:
-          type: object
-          required:
-            - status
-
-          properties:
-            status:
-              type: integer
-              example: 204
-  '400':
-    description: Bad request error
-    content:
-      application/json:
-        schema:
-          $ref: ../../../components/responses/schemas/400invalidId.yaml
-
+    description: No Content
   '401':
-    $ref: '../../../components/responses/401.yaml'
+    $ref: ../../../components/responses/401.yaml
   '404':
     $ref: '../../../components/responses/404.yaml'
   '500':

@@ -1,6 +1,6 @@
-description: Internal server error
+description: Internal Server Error
 content:
-  application/json:
+  application\json:
     schema:
       type: object
       required:
@@ -13,7 +13,7 @@ content:
           example: 500
         message:
           type: string
-          example: 'Something went wrong'
+          example: Something went wrong
         data:
           type: object
           required:
@@ -21,4 +21,4 @@ content:
           properties:
             message:
               type: string
-              example: 'Internal server error'
+              example: Server Error

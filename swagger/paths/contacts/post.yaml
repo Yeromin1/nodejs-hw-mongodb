@@ -16,31 +16,30 @@ requestBody:
           - contactType
         properties:
           name:
-            description: "Contact's name"
+            description: 'Contact`s name'
             type: string
             example: 'John Doe'
           phoneNumber:
-            description: "Contact's phoneNumber"
+            description: 'Contact`s phone number'
             type: string
-            example: '+380120000012'
+            example: '+380000000004'
+          email:
+            description: 'Contact`s email'
+            type: string
+            example: 'example@mail.com'
+          isFavourite:
+            description: 'Whether the contact is marked as a favorite'
+            type: boolean
+            example: false
           contactType:
-            description: "Contact's type"
+            description: 'Contact`s type'
             type: string
             enum: ['work', 'home', 'personal']
-            example: 'home'
           photo:
-            description: "Contact's photo"
-            type: string
+            description: 'Link to contact`s photo'
             format: binary
-          email:
-            description: "Contact's email"
             type: string
-            example: 'adfgh@gmail.com'
-          isFavourite:
-            description: 'Whether is contact is favourite'
-            type: boolean
-            example: true
-
+            example: 'https://res.cloudinary.com/dsajigq8r/image/upload/v1742059466/obsbt5gvzved2tvcl1ma.png'
 responses:
   '201':
     description: Creates a contact
@@ -61,15 +60,10 @@ responses:
               example: Successfully created a contact!
             data:
               type: object
-              $ref: '../../components/schemas/contact.yaml'
-  '400':
-    description: Bad request error
-    content:
-      application/json:
-        schema:
-          $ref: ../../components/responses/schemas/400.yaml
-
+              $ref: '../../components/schemas/contacts.yaml'
   '401':
     $ref: '../../components/responses/401.yaml'
+  '404':
+    $ref: '../../components/responses/404.yaml'
   '500':
     $ref: '../../components/responses/500.yaml'
