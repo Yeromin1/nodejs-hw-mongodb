@@ -28,7 +28,7 @@ export const setupServer = () => {
   app.use(router);
   app.use('/api-docs', swaggerDocs());
 
-  app.use('*', notFoundHandler);
+  app.use('/', notFoundHandler);
 
   app.use(errorHandler);
 
