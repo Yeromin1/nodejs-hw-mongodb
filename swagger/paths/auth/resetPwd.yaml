@@ -36,6 +36,9 @@ responses:
               type: string
               example: 'Password has been successfully reset'
             data: {}
+  '400':
+    $ref: '../../components/responses/400.yaml'
+    description: 'Missing token or new password'
   '401':
     $ref: '../../components/responses/401.yaml'
     description: 'Token is expired or invalid.'
