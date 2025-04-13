@@ -32,6 +32,9 @@ responses:
               type: string
               example: 'Reset password email was successfully sent!'
             data: {}
+  '400':
+    $ref: '../../components/responses/400.yaml'
+    description: 'Missing or invalid email'
   '404':
     $ref: '../../components/responses/404.yaml'
     description: 'User not found'

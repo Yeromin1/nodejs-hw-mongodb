@@ -39,6 +39,8 @@ responses:
                 accessToken:
                   type: string
                   example: 'FZ5lUcIf02vxG4jLikawUhFHm2SwUdX5J4ChyJSZQ2sUJYShhEBPmdKF3EUCHtSx'
+  '400':
+    $ref: '../../components/responses/400.yaml'
   '401':
     $ref: '../../components/responses/401.yaml'
   '500':

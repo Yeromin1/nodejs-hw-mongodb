@@ -47,6 +47,9 @@ responses:
                 accessToken:
                   type: string
                   example: 'FZ5lUcIf02vxG4jLikawUhFHm2SwUdX5J4ChyJSZQ2sUJYShhEBPmdKF3EUCHtSx'
+  '400':
+    $ref: '../../components/responses/400.yaml'
+    description: 'Invalid email or password format'
   '401':
     $ref: '../../components/responses/401.yaml'
     description: 'Unauthorized'
